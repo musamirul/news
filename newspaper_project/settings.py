@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 3rd Party
+    'crispy_forms',
+    "crispy_bootstrap4",
+    # Local
     'users.apps.UsersConfig',
+    'pages.apps.PagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +133,9 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 LOGIN_REDIRECT_URL ='home'
 LOGOUT_REDIRECT_URL ='home'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
